@@ -1,4 +1,4 @@
-package lifmanandroid.javaclass;
+package alif.iman.simplecaculator;
 
 import org.junit.Test;
 

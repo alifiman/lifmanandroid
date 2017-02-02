@@ -1,4 +1,4 @@
-package lifmanandroid.javaclass;
+package alif.iman.simplecaculator;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,16 +1,18 @@
-package lifmanandroid.javaclass;
+package alif.iman.javaclass;
 
 /**
  * Created by D2J-00 on 31/01/2017.
  */
 public class Barang {
+
     public static final int ELEKTRONIK = 1;
     public static final int NON_ELEKTRONIK = 2;
+
     private String nama;
     private int category;
     private int harga;
 
-    public Barang(String nama, int category, int harga){
+    public Barang(String nama, int category, int harga) {
         this.nama = nama;
         this.setCategory(category);
         this.harga = harga;
@@ -24,27 +26,27 @@ public class Barang {
     public void setNama(String nama){
         this.nama = nama;
     }
-
     public String getNama(){
         return this.nama;
-    }
-
-    public String getStringCategory(){
-        if (category == 1)
-            return "Elektronik";
-        else
-            return "Non Elektronik";
     }
 
     public int getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
-        if (category !=1 && category !=2)
-            this.category = 2;
+    public String getStringCategory(){
+        if(category == 1)
+            return "Elektronik";
         else
-        this.category = category;
+            return "Non Elektronik";
+
+    }
+
+    public void setCategory(int category) {
+        if(category !=1 && category !=2)
+            this.category=2;
+        else
+            this.category= category;
     }
 
     public int getHarga() {

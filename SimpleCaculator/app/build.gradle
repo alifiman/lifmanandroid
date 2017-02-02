@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "rilonur.gunawan.javaclass"
+        applicationId "rilonur.gunawan.simplecaculator"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
