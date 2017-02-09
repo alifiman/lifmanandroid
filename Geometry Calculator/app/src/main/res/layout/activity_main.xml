@@ -14,7 +14,11 @@
         android:id="@+id/geometry"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content" ></Spinner>
+=======
+        android:layout_height="wrap_content"></Spinner>
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
 
     <EditText
         android:id="@+id/input1"
@@ -23,6 +27,7 @@
         android:layout_width="150dp"
         android:inputType="numberDecimal"
         android:layout_height="wrap_content"/>
+<<<<<<< HEAD
 
     <TextView
         android:id="@+id/txt1"
@@ -34,24 +39,46 @@
         android:gravity="center_vertical"
         android:text="Panjang" />
 
+=======
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_below="@id/geometry"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/input1"
+        android:gravity="center_vertical"
+        android:text="Panjang" />
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
     <EditText
         android:id="@+id/input2"
         android:layout_below="@id/input1"
         android:layout_alignParentRight="true"
         android:layout_width="150dp"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"/>
 
+=======
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"/>
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
     <TextView
         android:id="@+id/txt2"
         android:layout_below="@id/input1"
         android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignBottom="@+id/input2"
         android:gravity="center_vertical"
         android:text="Lebar" />
 
+=======
+        android:layout_alignBottom="@id/input2"
+        android:gravity="center_vertical"
+        android:text="Lebar" />
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
     <EditText
         android:id="@+id/input3"
         android:layout_below="@id/input2"
@@ -59,6 +86,10 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
     <TextView
         android:id="@+id/txt3"
         android:layout_below="@id/input2"
@@ -74,12 +105,21 @@
         android:layout_below="@id/input3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="HITUNG"
         android:onClick="calculate"/>
 
     <TextView
         android:layout_below="@id/btn_calc"
         android:id="@+id/result"
+=======
+        android:layout_alignBottom="@id/btn_calc"
+        android:text="HITUNG"
+        android:onClick="calculator"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_below="@id/btn_calc"
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </RelativeLayout>

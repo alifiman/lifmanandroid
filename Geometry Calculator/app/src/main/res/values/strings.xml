@@ -4,8 +4,11 @@
         <item>Persegi</item>
         <item>Segitiga</item>
         <item>Lingkaran</item>
+<<<<<<< HEAD
         <item>Balok</item>
         <item>Bola</item>
+=======
+>>>>>>> 959fb57e75fda4a06411d562de5ad6b9b4c49f21
     </string-array>
 
 </resources>
