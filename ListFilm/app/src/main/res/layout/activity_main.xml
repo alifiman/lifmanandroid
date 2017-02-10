@@ -9,7 +9,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="alif.iman.listfilm.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:id="@+id/txt1"
+        android:text="List Film : "/>
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/tambah"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:text="+"
+        android:onClick="TambahListadd"/>
+
     <ListView
+        android:layout_below="@+id/tambah"
         android:id="@+id/list_film"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
