@@ -2,10 +2,9 @@ package alif.iman.listfilm;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,18 +17,18 @@ public class FormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
-            Spinner spinner = (Spinner) findViewById(R.id.pilihrating);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_spinner_item, rating);
+        Spinner pilihrating = (Spinner) findViewById(R.id.pilihrating);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, rating);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        pilihrating.setAdapter(adapter);
         }
 
-      public void addFile(View view){
+      public void addFilm(View view){
           String title = ((EditText) findViewById(R.id.inpjudul)).getText().toString();
           int year = Integer.parseInt(((EditText) findViewById(R.id.year)).getText().toString());
           double rating = Double.parseDouble(((Spinner) findViewById(R.id.pilihrating)).getSelectedItem().toString());
-          String description = ((EditText) findViewById(R.id.description)).getText().toString();
+          String description = ((EditText) findViewById(R.id.inpdeskripsi)).getText().toString();
 
           Movie movie = new Movie(title, description, rating, year);
 

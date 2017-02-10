@@ -39,53 +39,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ArrayAdapter<Movie> adapter = new ArrayAdapter<Movie>(this,
-                android.R.layout.simple_list_item_1, movies);
-        ListView listView = (ListView) findViewById(R.id.list_film);
-        listView.setAdapter(adapter);
+
         initMovies();
-        Button btn = (Button) findViewById(R.id.tambah);
+        adapter = new ArrayAdapter<Movie>(this,
+                android.R.layout.simple_list_item_1, movies);
+        listView = (ListView) findViewById(R.id.list_film);
+        listView.setAdapter(adapter);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                Intent pindah = new Intent(MainActivity.this,FormActivity.class);
-                startActivity(pindah);
-                //menghubungkan antar activity dengan intent
-
-            }
-        });
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Movie selectedMovie = movies.get(position);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                Movie selectMovie = movies.get(position);
                 Intent intent = new Intent(getBaseContext(), DetailActivity.class);
-                intent.putExtra("alif.iman.listfilm", selectedMovie);
+                intent.putExtra("alif.iman.listfilm", selectMovie);
                 startActivity(intent);
             }
         });
     }
-    public void TambahListadd(View view){
+
+    public void tambahlistadd(View view){
         Intent intent = new Intent(this, FormActivity.class);
         startActivityForResult(intent, 1);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        if (requestCode ==1){
-            if (resultCode == Activity.RESULT_OK){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1){
+            if(resultCode==Activity.RESULT_OK){
+
+
                 Movie newMovie = (Movie) data.getSerializableExtra("filmlist.result");
                 movies.add(newMovie);
-                adapter.notifyDataSetChanged();
-
-            }
+                adapter.notifyDataSetChanged();}
         }
     }
 }
+
 
 
 
