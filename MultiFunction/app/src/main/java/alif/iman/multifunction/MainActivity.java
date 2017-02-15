@@ -15,16 +15,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 
+    setContentView(R.layout.activity_main);
+}
     public void showMessage(View view){
         //contoh penggunaan implisit inten
         Intent intent = new Intent(this, ShowMessage.class);
         TextView txtMessage = (TextView) findViewById(R.id.txt_message);
         intent.putExtra(EXTRA, txtMessage.getText().toString());
         startActivity(intent);
-    }
+}
     public void openBrowser(View view){
         //membuka activity yg akan mengeksekusi implisit inten
         Intent intent = new Intent(this, IntentExecutor.class);

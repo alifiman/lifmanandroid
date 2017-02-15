@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="alif.iman.multifunction">
+    package="alif.iman.aplikasikeuangan">
 
     <application
         android:allowBackup="true"
@@ -15,9 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowMessage" />
-        <activity android:name=".IntentExecutor" />
-        <activity android:name=".SendEmail"></activity>
+        <activity android:name=".FormTransaksi" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>
